@@ -47,39 +47,71 @@ const NavBar = () => {
             </span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            className={!navBar ? "collapse navbar-collapse" : ""}
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/">
+                <NavLink
+                  className="nav-link"
+                  aria-current="page"
+                  to="/"
+                  onClick={() => {
+                    setNavBar(!navBar);
+                  }}
+                >
                   Home
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/product">
+                <NavLink
+                  className="nav-link"
+                  to="/product"
+                  onClick={() => {
+                    setNavBar(!navBar);
+                  }}
+                >
                   Product
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
+                <NavLink
+                  className="nav-link"
+                  to="/about"
+                  onClick={() => {
+                    setNavBar(!navBar);
+                  }}
+                >
                   About
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
+                <NavLink
+                  className="nav-link"
+                  to="/contact"
+                  onClick={() => {
+                    setNavBar(!navBar);
+                  }}
+                >
                   Contact
                 </NavLink>
               </li>
             </ul>
-            <Link to='/' className="navbar-brand me-2 fw-bold">Apple Store</Link>
+            <Link to="/" className="navbar-brand me-2 fw-bold">
+              Apple Store
+            </Link>
             <Login />
             <Signup />
             <CartBtn />
           </div>
         </div>
-        <Link to='/' className="navbar-brand2 me-2 fw-bold">Apple Store</Link>
+        <Link to="/" className="navbar-brand2 me-2 fw-bold">
+          Apple Store
+        </Link>
       </nav>
 
       {navBarScroll && (
