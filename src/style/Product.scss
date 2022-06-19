@@ -1,0 +1,45 @@
+.card {
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.productDetailsCard {
+  .product {
+    img {
+      transition: all 0.5s ease;
+      animation: rotate 10s infinite linear;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      @media screen and (max-width: 991px) {
+        width: 65%;
+        height: auto;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .productDetailsInfo{
+   
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

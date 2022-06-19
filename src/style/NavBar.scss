@@ -1,0 +1,89 @@
+/* =============================== NavBar =============================== */
+.navbar {
+  z-index: 999999999 !important;
+  .navbar-nav li {
+    a {
+      font-size: 17px;
+      color: #000;
+      margin-left: 15px;
+      @media screen and (max-width: 991px) {
+        width: fit-content;
+        padding: 5px 10px;
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+  .navbar-brand {
+    letter-spacing: 3px;
+    color: #000;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  .navbar-brand2 {
+    display: none;
+    letter-spacing: 3px;
+
+    @media screen and (max-width: 991px) {
+      display: block;
+      position: absolute;
+      top: 22px;
+      right: 5px;
+      letter-spacing: 3px;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+  .navbar-toggler-icon {
+    i {
+      font-size: 28px;
+    }
+  }
+}
+
+/* =============================== NavBar Scroll =============================== */
+.navbarScroll {
+  position: fixed;
+  top: -75px !important;
+  left: 0;
+  right: 0;
+  transform: translateY(75px) !important;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.1);
+  height: 75px;
+  transition: all 0.5s linear;
+  @media (max-width: 991px) {
+    height: auto;
+  }
+}
+
+/* =============================== Scroll Up Icon =============================== */
+.ScrolUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(128, 128, 128, 0.215);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 999999999;
+  transition: all 0.3s linear;
+  &:hover i {
+    color: rgba(0, 0, 0, 0.872);
+  }
+  i {
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.655);
+  }
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+.cartInfo{
+    align-items: center;
+    @media screen and (max-width: 991px){
+        flex-direction: column;
+        text-align: center;
+    }
+    h3{
+        @media screen and (max-width: 991px){
+                margin: 40px 0;
+        }
+    }
+}
