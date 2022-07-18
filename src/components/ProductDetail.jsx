@@ -15,7 +15,7 @@ const ProductDetail = () => {
   const dispatch = useDispatch();
   // Add to cart
   const handleCart = (product) => {
-    if (cartBtn == "Add to Cart") {
+    if (cartBtn === "Add to Cart") {
       dispatch(addItem(product));
       setCartBtn("Remove from Cart");
     } else {
