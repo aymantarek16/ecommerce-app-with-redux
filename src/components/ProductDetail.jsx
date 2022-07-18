@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const [cartBtn, setCartBtn] = useState("Add to Cart");
   // Get the product id from the url
   const { title } = useParams();
-  const proDetail = DATA.filter((item) => item.title == title);
+  const proDetail = DATA.filter((item) => item.title === title);
   const product = proDetail[0];
   console.log(product.id);
 
